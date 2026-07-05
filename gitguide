@@ -1,0 +1,5 @@
+discard  放弃还没commit的文件更改
+
+reset 把仓库强制回退到某个历史状态
+
+revert 生成反向commit 抵消某次commit
