@@ -1,0 +1,51 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Java / Maven / Gradle
+target/
+build/
+.gradle/
+*.class
+*.jar
+*.war
+
+# Build output
+dist/
+out/
+*.log
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.local
+credentials.json
+*.pem
+*.key
+
+# Temp & cache
+.cache/
+tmp/
+temp/
+*.tmp
