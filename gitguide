@@ -1,0 +1,34 @@
+# Git 常用命令
+
+discard  放弃还没 commit 的文件更改
+reset    把仓库强制回退到某个历史状态
+revert   生成反向 commit，抵消某次 commit
+
+# 并行工作树（worktree）
+
+原理：同一个 .git 仓库，多个独立工作目录，互不影响。
+主干目录：E:\VM\git          → main 分支
+工作树目录：E:\VM\git-worktrees\<名称>  → wt/<名称> 分支
+
+## 快速上手
+
+# 1. 创建名为 demo 的工作树（从 main 分出）
+.\scripts\worktree.ps1 new demo
+
+# 2. 进入工作树随便改、随便测
+cd E:\VM\git-worktrees\demo
+# ... 开发、commit ...
+
+# 3. 开发完成，回到主干合并
+cd E:\VM\git
+.\scripts\worktree.ps1 merge demo
+
+# 4. 查看 / 删除
+.\scripts\worktree.ps1 list
+.\scripts\worktree.ps1 remove demo -DeleteBranch
+
+## 原生 git 命令（等价）
+
+git worktree add ../git-worktrees/demo wt/demo
+git worktree list
+git worktree remove ../git-worktrees/demo
